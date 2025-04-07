@@ -21,8 +21,17 @@ export class Task {
   @Prop({ default: 0 })
   attempts: number;
 
+  @Prop({ default: 0 })
+  priority?: number;
+
   @Prop()
   errorMessage?: string;
+
+  @Prop()
+  createdAt?: Date;
+
+  @Prop()
+  updatedAt?: Date;
 }
 
 export const TaskSchema = SchemaFactory.createForClass(Task);
