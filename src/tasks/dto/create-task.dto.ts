@@ -6,6 +6,7 @@ export class CreateTaskDto {
   @IsString()
   type: string;
 
+  @ApiProperty({ example: 2, description: 'Priority of the task, Optional' })
   @IsOptional()
   @IsInt()
   @Min(0)
